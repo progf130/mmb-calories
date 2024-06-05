@@ -9,7 +9,7 @@ async function bootstrap() {
     transport: Transport.GRPC,
     options: {
       package: 'calories',
-      protoPath: join(__dirname, ''),
+      protoPath: join(__dirname, './interface/calories.proto'),
     },
   } as GrpcOptions);
   await app.listen();

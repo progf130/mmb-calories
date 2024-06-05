@@ -1,0 +1,25 @@
+syntax = 'proto3';
+
+enum Ru_Units {
+  gram = 0;
+  milliliter = 2;
+  piece = 3;
+}
+
+package calories;
+
+service ProductsService{
+  rpc Create (CreateProductMessage) returns (Product) {}
+}
+
+message  CreateProductMessage{
+  string name = 1;
+  int32 proteins = 2;
+  int32 fats = 3;
+  int32 carbohydrates = 4;
+  Ru_Units unit = 5;
+}
+
+message Product{
+  string id = 1;
+}

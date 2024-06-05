@@ -12,7 +12,7 @@ const infrastructure = [
 
 @Module({
   imports: [],
-  providers: [],
+  providers: [...infrastructure],
   controllers: [],
 })
 export class CaloriesModule {
